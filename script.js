@@ -1,6 +1,7 @@
 const container = document.querySelector('div.container');
 
 const videoEL = document.createElement('video');
+videoEL.classList.add('video');
 videoEL.src = 'img/video.mp4';
 videoEL.style.width = '660px';
 container.appendChild(videoEL);
@@ -30,12 +31,13 @@ uiDiv.appendChild(playEl);
 uiDiv.appendChild(pauseEl);
 uiDiv.appendChild(progresEl);
 
-const timeEl = document.createElement('i');
+const brEl = document.createElement('br');
+uiDiv.appendChild(brEl);
+
+const timeEl = document.createElement('p');
 timeEl.innerHTML = '0';
 uiDiv.appendChild(timeEl);
 
-const brEl = document.createElement('br');
-uiDiv.appendChild(brEl);
 
 const volumEl = document.createElement('input');
 volumEl.classList.add('volume');
